@@ -17,21 +17,19 @@
 | Returns additional price for food options (no food, 2x number of guests for light snacks, 3x number of guests for hors d'oeuvres, 4x number of guests for pizza, 15x number of guests for 5 course meal)| 2 guests, light snacks | price = 2x3 + 2x2 = 10|
 | Returns additional price for drink options (no drinks, 1x number of guests for coffee and tea, 5x number of guests for beer, 10x number of guests for open bar)| 2 guests, light snacks, open bar | price = 2x3 + 2x2 + 2x10 = 30|
 | Returns additional price for entertainment options ( no entertainment, DJ +100, Clowns +30, Magician +60, keynote speaker +200)|  2 guests, light snacks, open bar, Magician (i.e. a really expensive date without enough food)  |  price = 2x3 + 2x2 + 2x10 +60 = 90 |
-| returns discount for coupon code (SUPERDEAL20 20%off, DJDISCOUNT30 $30off with DJ, MAGICALMAYHEM free Magician)| 2 guests, light snacks, open bar, Magician, MAGICALMAYHEM |
-| price = 2x3 + 2x2 + 2x10 + 60 - 60 = 30 |
-| no discount added if you do not have appropriate option selected| 2 guests, light snacks, open bar, Magician, DJDISCOUNT30 |
-| price = 2x3 + 2x2 + 2x10 + 60 = 90 |
+| returns discount for coupon code (SUPERDEAL20 20%off, DJDISCOUNT30 $30off with DJ, MAGICALMAYHEM free Magician)| 2 guests, light snacks, open bar, Magician, MAGICALMAYHEM | price = 2x3 + 2x2 + 2x10 + 60 - 60 = 30 |
+| no discount added if you do not have appropriate option selected| 2 guests, light snacks, open bar, Magician, DJDISCOUNT30 | price = 2x3 + 2x2 + 2x10 + 60 = 90 |
 
 
-###This is the initial release (1.0):
+### This is the initial release (1.0):
 https://github.com/stormihoebe/java-party-planner
 
 
 ## Setup/Installation Requirements
 Open the terminal and preform the following:
-* download updated version of java (https://java.com/en/)
-* clone repository
+* download download or update java if necessary (https://java.com/en/)
 * open command line console
+* clone repository from github to desktop
 * navigate to party-planner/src/main/java
 * compile App.java $ java App.java
 * run App.class $ java App
