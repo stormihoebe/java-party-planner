@@ -28,7 +28,7 @@ public class App{
 			System.out.println("Number of guests: " + newParty.getGuests());
 			System.out.println("Food Option: " + newParty.getFoodChoice());
 			System.out.println("Drink Option: " + newParty.getDrinkChoice());
-			System.out.println("Entertainment Option: " + newParty.getEntertainmentChoice());
+			System.out.println("Entertainment Option: " + newParty.getEntertainmentChoice()); 
 
 			System.out.println("\n------------------------------------------------\nYour total cost for this party comes to: $" + newParty.partyPrice()+"\n------------------------------------------------\n");
 
