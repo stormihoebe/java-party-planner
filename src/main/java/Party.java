@@ -21,24 +21,28 @@ public class Party{
     mFoodChoice = foodChoice;
     if (mFoodChoice == 0){
       price += mGuests*0;
-      return price;
     } else if (mFoodChoice == 1){
       price += mGuests*2;
-      return price;
     } else if (mFoodChoice == 2){
       price += mGuests*3;
-      return price;
     }else if (mFoodChoice == 3){
       price += mGuests*4;
-      return price;
     }else if (mFoodChoice == 4){
       price += mGuests*15;
-      return price;
-    }else {
-      return price;
+    }
+
+    mDrinkChoice = drinkChoice;
+    if (mDrinkChoice == 0){
+      price += mGuests*0;
+    } else if (mDrinkChoice == 1){
+      price += mGuests*1;
+    } else if (mDrinkChoice == 2){
+      price += mGuests*5;
+    }else if (mDrinkChoice == 3){
+      price += mGuests*10;
     }
 
 
-    // return price;
+    return price;
   }
 }

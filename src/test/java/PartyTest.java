@@ -36,4 +36,24 @@ public class PartyTest {
     Integer resultExpected = 36;
     assertEquals(resultExpected, testParty.partyPrice(2,4,0,0, ""));
   }
+
+  @Test
+  public void newParty_PriceWith2GuestsAndMealAndBar_36(){
+    Party testParty = new Party();
+    Integer resultExpected = 36;
+    assertEquals(resultExpected, testParty.partyPrice(2,4,0,0, ""));
+  }
+
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndOpenBar_30(){
+    Party testParty = new Party();
+    Integer resultExpected = 30;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,3,0, ""));
+  }
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndTeaCoffee_30(){
+    Party testParty = new Party();
+    Integer resultExpected = 12;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,1,0, ""));
+  }
 }
