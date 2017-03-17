@@ -10,6 +10,29 @@ public class Party{
   private Integer mEntertainmentChoice; //0 = entertainment, 1 = DJ (+100), 2 = clowns (+30), 3 = Magician (+60), 4 = speaker (+200)
   private String mCoupon; // SUPERDEAL20 20%off, DJDISCOUNT30 $30off with DJ, MAGICALMAYHEM free Magician
 
+  public Party(Integer guest, Integer food, Integer drink, Integer entertainment, String coupons) {
+    mGuests = guest;
+    mFoodChoice = food;
+    mDrinkChoice = drink;
+    mEntertainmentChoice = entertainment;
+    mCoupon = coupons;
+  }
+
+  public Integer getGuests(){
+    return mGuests;
+  }
+  public Integer getFoodChoice(){
+    return mFoodChoice;
+  }
+  public Integer getDrinkChoice(){
+    return mDrinkChoice;
+  }
+  public Integer getEntertainmentChoice(){
+    return mEntertainmentChoice;
+  }
+  public String getCoupon(){
+    return mCoupon;
+  }
 
   public Integer partyPrice ( Integer guests, Integer foodChoice, Integer drinkChoice, Integer entertainmentChoice, String coupon){
     mGuests = guests;
