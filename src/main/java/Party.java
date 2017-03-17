@@ -21,25 +21,64 @@ public class Party{
   public Integer getGuests(){
     return mGuests;
   }
-  public Integer getFoodChoice(){
-    return mFoodChoice;
+  public String getFoodChoice(){
+    String foodString = "Not a valid Option";
+    if (mFoodChoice == 0){
+      foodString= "No Food";
+    } else if (mFoodChoice == 1){
+      foodString= "Light Snacks";
+    } else if (mFoodChoice == 2){
+      foodString= "Hors Doeuvres";
+    }else if (mFoodChoice == 3){
+      foodString= "Pizza";
+    }else if (mFoodChoice == 4){
+      foodString= "Five Course Meal";
+    }
+    return foodString;
   }
-  public Integer getDrinkChoice(){
-    return mDrinkChoice;
+  public String getDrinkChoice(){
+    String drinkString = "Not a valid Option";
+    if (mDrinkChoice == 0){
+      drinkString = "No Drinks";
+    } else if (mDrinkChoice == 1){
+      drinkString = "Coffee or Tea";
+    } else if (mDrinkChoice == 2){
+      drinkString = "Beer";
+    }else if (mDrinkChoice == 3){
+      drinkString = "Open Bar";
+    }
+    return drinkString;
   }
-  public Integer getEntertainmentChoice(){
-    return mEntertainmentChoice;
+  public String getEntertainmentChoice(){
+    String entertainmentString = "Not a valid Option";
+    if (mEntertainmentChoice == 0){
+      entertainmentString = "No Entertainment";
+    } else if (mEntertainmentChoice == 1){
+      entertainmentString = "DJ";
+    } else if (mEntertainmentChoice == 2){
+      entertainmentString = "Clowns";
+    } else if (mEntertainmentChoice == 3){
+      entertainmentString = "Magician";
+    } else if (mEntertainmentChoice == 4){
+      entertainmentString = "Keynote Speaker";
+    }
+    return entertainmentString;
   }
   public String getCoupon(){
-    return mCoupon;
+    String couponString = "Coupon code not valid based on your entry";
+    if (mCoupon.equals("SUPERDEAL20")){
+      couponString = "SUPERDEAL20 -- 20% off your entire event" ;
+    } else if (mCoupon.equals("DJDISCOUNT30") && (mEntertainmentChoice == 1)){
+      couponString = "DJDISCOUNT30 -- $30 off any party with a DJ";
+    } else if (mCoupon.equals("MAGICALMAYHEM") && (mEntertainmentChoice == 3)){
+      couponString = "MAGICALMAYHEM -- free magic show";
+    }
+    return couponString;
   }
 
-  public Integer partyPrice ( Integer guests, Integer foodChoice, Integer drinkChoice, Integer entertainmentChoice, String coupon){
-    mGuests = guests;
+  public Integer partyPrice (){
     Integer price = 0;
     price = mGuests*3;
-
-    mFoodChoice = foodChoice;
     if (mFoodChoice == 0){
       price += mGuests*0;
     } else if (mFoodChoice == 1){
@@ -51,8 +90,6 @@ public class Party{
     }else if (mFoodChoice == 4){
       price += mGuests*15;
     }
-
-    mDrinkChoice = drinkChoice;
     if (mDrinkChoice == 0){
       price += mGuests*0;
     } else if (mDrinkChoice == 1){
@@ -62,8 +99,6 @@ public class Party{
     }else if (mDrinkChoice == 3){
       price += mGuests*10;
     }
-
-    mEntertainmentChoice = entertainmentChoice;
     if (mEntertainmentChoice == 0){
       price += 0;
     } else if (mEntertainmentChoice == 1){
@@ -75,7 +110,6 @@ public class Party{
     } else if (mEntertainmentChoice == 4){
     price += 200;
     }
-    mCoupon = coupon;
     if (mCoupon.equals("SUPERDEAL20")){
       price -= (price/5);
     } else if (mCoupon.equals("DJDISCOUNT30") && (mEntertainmentChoice == 1)){
@@ -83,7 +117,6 @@ public class Party{
     } else if (mCoupon.equals("MAGICALMAYHEM") && (mEntertainmentChoice == 3)){
       price -= 60;
     }
-
     return price;
   }
 }

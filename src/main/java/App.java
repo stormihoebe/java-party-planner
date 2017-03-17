@@ -14,7 +14,7 @@ public class App{
 			System.out.println("How many guests will be attending your party or event?");
 			Integer guests = Integer.parseInt(myConsole.readLine());
 
-			System.out.println("What kind of food would you like to serve at the party or event? Enter the number corrisponding with your choice:\n0. No Food\n1. Light Snacks\n2. Hors doeuvres\n3. Pizza\n4. 5 course meal");
+			System.out.println("What kind of food would you like to serve at the party or event? Enter the number corrisponding with your choice:\n0. No Food\n1. Light Snacks\n2. Hors doeuvres\n3. Pizza\n4. Five course meal");
 			Integer food = Integer.parseInt(myConsole.readLine());
 
 			System.out.println("What kind of drinks would you like available for your guests? Enter the number corrisponding with your choice:\n0. No Drinks\n1. Coffee or Tea\n2. Beer\n3. Open Bar");
@@ -29,13 +29,13 @@ public class App{
 
 			System.out.println("Your responses were recorded as follows:");
 			System.out.println("Number of guests: " + newParty.getGuests());
-			System.out.println("Food Option # " + newParty.getFoodChoice());
-			System.out.println("Drink Option # " + newParty.getDrinkChoice());
-			System.out.println("Entertainment Option # " + newParty.getEntertainmentChoice());
+			System.out.println("Food Option: " + newParty.getFoodChoice());
+			System.out.println("Drink Option: " + newParty.getDrinkChoice());
+			System.out.println("Entertainment Option: " + newParty.getEntertainmentChoice());
 			System.out.println("Coupon Code: " + newParty.getCoupon());
 
 
-			System.out.println("\n----------------------\nYour total cost for this party comes to: $" + newParty.partyPrice(guests, food, drinks, entertainment, coupon)+"\n----------------------\n");
+			System.out.println("\n------------------------------------------------\nYour total cost for this party comes to: $" + newParty.partyPrice()+"\n------------------------------------------------\n");
 
 			System.out.println("Choose from the following options: \n1. Submit your responses and quit application \n2. Start over to make adjustments to your previous responses");
 			userContinue = myConsole.readLine();
