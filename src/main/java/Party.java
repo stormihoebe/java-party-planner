@@ -11,8 +11,6 @@ public class Party{
   private String mCoupon; // SUPERDEAL20 20%off, DJDISCOUNT30 $30off with DJ, MAGICALMAYHEM free Magician
 
 
-
-
   public Integer partyPrice ( Integer guests, Integer foodChoice, Integer drinkChoice, Integer entertainmentChoice, String coupon){
     mGuests = guests;
     Integer price = 0;
@@ -42,6 +40,26 @@ public class Party{
       price += mGuests*10;
     }
 
+    mEntertainmentChoice = entertainmentChoice;
+    if (mEntertainmentChoice == 0){
+      price += 0;
+    } else if (mEntertainmentChoice == 1){
+      price += 100;
+    } else if (mEntertainmentChoice == 2){
+      price += 30;
+    } else if (mEntertainmentChoice == 3){
+      price += 60;
+    } else if (mEntertainmentChoice == 4){
+    price += 200;
+    }
+    mCoupon = coupon;
+    if (mCoupon.equals("SUPERDEAL20")){
+      price -= (price/5);
+    } else if (mCoupon.equals("DJDISCOUNT30") && (mEntertainmentChoice == 1)){
+      price -= 30;
+    } else if (mCoupon.equals("MAGICALMAYHEM") && (mEntertainmentChoice == 3)){
+      price -= 60;
+    }
 
     return price;
   }

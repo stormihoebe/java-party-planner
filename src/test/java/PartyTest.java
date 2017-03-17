@@ -38,10 +38,10 @@ public class PartyTest {
   }
 
   @Test
-  public void newParty_PriceWith2GuestsAndMealAndBar_36(){
+  public void newParty_PriceWith2GuestsAndMealAndBar_56(){
     Party testParty = new Party();
-    Integer resultExpected = 36;
-    assertEquals(resultExpected, testParty.partyPrice(2,4,0,0, ""));
+    Integer resultExpected = 56;
+    assertEquals(resultExpected, testParty.partyPrice(2,4,3,0, ""));
   }
 
   @Test
@@ -56,4 +56,37 @@ public class PartyTest {
     Integer resultExpected = 12;
     assertEquals(resultExpected, testParty.partyPrice(2,1,1,0, ""));
   }
+
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndOpenBarAndMagician_90(){
+    Party testParty = new Party();
+    Integer resultExpected = 90;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,3,3, ""));
+  }
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndOpenBarAndClowns_60(){
+    Party testParty = new Party();
+    Integer resultExpected = 60;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,3,2, ""));
+  }
+
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndOpenBarAndClownsAnd20OffCoupon_48(){
+    Party testParty = new Party();
+    Integer resultExpected = 48;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,3,2, "SUPERDEAL20"));
+  }
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndOpenBarAndMagicianAndFreeMagicianCoupon_30(){
+    Party testParty = new Party();
+    Integer resultExpected = 30;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,3,3, "MAGICALMAYHEM"));
+  }
+  @Test
+  public void newParty_PriceWith2GuestsAndLightSnacksAndOpenBarAndMagicianAndDJCoupon_90(){
+    Party testParty = new Party();
+    Integer resultExpected = 90;
+    assertEquals(resultExpected, testParty.partyPrice(2,1,3,3, "DJDISCOUNT30"));
+  }
+
 }
