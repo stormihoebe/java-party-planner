@@ -6,7 +6,7 @@
 
 ## Description
 
-#### This command line application asks users about their upcoming party, prints details to screen, and quotes a price for the party described.
+#### This command line application asks users about their upcoming party, prints details to screen, and quotes a price for the party described. Application welcomes user and asks if they want to continue entering information or quit the program. After selecting to continue, program asks a series of questions including: how many guests, what kind of food and drinks to offer and entertainment. After user makes selections, the program creates a new party object, runs the pricing method on the new party object to determine price, and prints information to the screen. The user is then asked if they would like to either enter a coupon, submit and quit, or start over. If the user chooses to enter a coupon, they will be prompted to enter the code. If the code that the user entered is applicable, it is applied and the new discounted price is listed to the user. The user is then asked if they would like to submit and quit or start over.
 
 ### Specifications
 
@@ -29,24 +29,32 @@ https://github.com/stormihoebe/java-party-planner
 
 ## Setup/Installation Requirements
 Open the terminal and preform the following:
+* download updated version of java (https://java.com/en/)
 * clone repository
-* open console
+* open command line console
+* navigate to party-planner/src/main/java
+* compile App.java $ java App.java
+* run App.class $ java App
+* follow prompts and enter information about party/event
+* enter coupon code to see discounted price (Options: SUPERDEAL20 20%off, DJDISCOUNT30 $30off with DJ, MAGICALMAYHEM free Magician)
+* repeat/exit as desired
 
 
 ## Known Bugs
-
+program does not actually have the capability of submitting responses, it is simply for practice writing java programs and running tests
 
 
 ## Support and contact details
 
 Contact Stormi at Epicodus
+stormihoebe@gmail.com
 
 #Built with the following tools:
 
 * Atom (https://atom.io/)
 * GitHub (https://github.com/)
 * Git (https://git-scm.com/)
-* Java
+* Java (https://java.com/en/)
 
 #License
 
