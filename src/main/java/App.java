@@ -12,16 +12,16 @@ public class App{
 		}
 		while(programRunning) {
 			System.out.println("How many guests will be attending your party or event?");
-			Integer guests = Integer.parseInt(myConsole.readLine());
+			double guests = Double.parseDouble(myConsole.readLine());
 
 			System.out.println("What kind of food would you like to serve at the party or event? Enter the number corrisponding with your choice:\n0. No Food\n1. Light Snacks\n2. Hors doeuvres\n3. Pizza\n4. Five course meal");
-			Integer food = Integer.parseInt(myConsole.readLine());
+			double food = Double.parseDouble(myConsole.readLine());
 
 			System.out.println("What kind of drinks would you like available for your guests? Enter the number corrisponding with your choice:\n0. No Drinks\n1. Coffee or Tea\n2. Beer\n3. Open Bar");
-			Integer drinks = Integer.parseInt(myConsole.readLine());
+			double drinks = Double.parseDouble(myConsole.readLine());
 
 			System.out.println("What kind of entertainment would you like to offer? Enter the number corrisponding with your choice:\n0. No Entertainment\n1. DJ\n2. Clowns\n3. Magician\n4. Keynote Speaker");
-			Integer entertainment = Integer.parseInt(myConsole.readLine());
+			double entertainment = Double.parseDouble(myConsole.readLine());
 			Party newParty = new Party(guests, food, drinks, entertainment, "");
 
 			System.out.println("Your responses were recorded as follows:");
