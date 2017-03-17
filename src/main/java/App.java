@@ -22,26 +22,38 @@ public class App{
 
 			System.out.println("What kind of entertainment would you like to offer? Enter the number corrisponding with your choice:\n0. No Entertainment\n1. DJ\n2. Clowns\n3. Magician\n4. Keynote Speaker");
 			Integer entertainment = Integer.parseInt(myConsole.readLine());
-
-			System.out.println("Please enter your coupon code now if applicable");
-			String coupon = myConsole.readLine();
-			Party newParty = new Party(guests, food, drinks, entertainment, coupon);
+			Party newParty = new Party(guests, food, drinks, entertainment, "");
 
 			System.out.println("Your responses were recorded as follows:");
 			System.out.println("Number of guests: " + newParty.getGuests());
 			System.out.println("Food Option: " + newParty.getFoodChoice());
 			System.out.println("Drink Option: " + newParty.getDrinkChoice());
 			System.out.println("Entertainment Option: " + newParty.getEntertainmentChoice());
-			System.out.println("Coupon Code: " + newParty.getCoupon());
-
 
 			System.out.println("\n------------------------------------------------\nYour total cost for this party comes to: $" + newParty.partyPrice()+"\n------------------------------------------------\n");
 
-			System.out.println("Choose from the following options: \n1. Submit your responses and quit application \n2. Start over to make adjustments to your previous responses");
+			System.out.println("Choose from the following options: \n1. Enter a coupon code to receive discount \n2. Submit your responses and quit application \n3. Start over to make adjustments to your previous responses");
 			userContinue = myConsole.readLine();
-			if (userContinue.equals("1")){
+			if (userContinue.equals("2")){
 				programRunning = false;
+			} else if (userContinue.equals("1")){
+				System.out.println("Please enter your coupon code:");
+				String coupon = myConsole.readLine();
+				Party couponParty = new Party(guests, food, drinks, entertainment, coupon);
+
+				System.out.println("\n------------------------------------------------\nCoupon Code: " + couponParty.getCoupon()+"\nYour updated price comes to: $" + couponParty.partyPrice()+"\n------------------------------------------------\n");
+
+				System.out.println("Choose from the following options: \n1. Submit your responses and quit application \n2. Start over to make adjustments to your previous responses");
+				userContinue = myConsole.readLine();
+				if (userContinue.equals("1")){
+					programRunning = false;
+				}
 			}
+
+
+
+
+
 
 
 		}
