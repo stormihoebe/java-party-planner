@@ -14,6 +14,31 @@ public class Party{
 
 
   public Integer partyPrice ( Integer guests, Integer foodChoice, Integer drinkChoice, Integer entertainmentChoice, String coupon){
-    return 0;
+    mGuests = guests;
+    Integer price = 0;
+    price = mGuests*3;
+
+    mFoodChoice = foodChoice;
+    if (mFoodChoice == 0){
+      price += mGuests*0;
+      return price;
+    } else if (mFoodChoice == 1){
+      price += mGuests*2;
+      return price;
+    } else if (mFoodChoice == 2){
+      price += mGuests*3;
+      return price;
+    }else if (mFoodChoice == 3){
+      price += mGuests*4;
+      return price;
+    }else if (mFoodChoice == 4){
+      price += mGuests*15;
+      return price;
+    }else {
+      return price;
+    }
+
+
+    // return price;
   }
 }
